@@ -1,0 +1,66 @@
+.multi-calendar>table{  /*We'll give our table rounded borders to make it fancy.  It's purely ostensible so it's not like I'm going out of my way to make it work in all browsers.  Plus, if they're using IE you should have some kind of notice on your site shying them away from it anyways ;D */
+	border: 1px solid #D6D6D6;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+}
+
+.multi-calendar>table>thead>tr>th{  /*This is the very top row in the table, where the month and year are held (and the two links for browsing months).*/
+	font-weight: bold;
+	color: #333;
+	background-color: #EAEAEA;
+	border-bottom: 1px solid #D6D6D6;
+}
+
+.multi-calendar>table>thead>tr>th>a{  /*This is used for the links that allow the user to browse between months.*/
+	margin: 3px;
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.multi-calendar>table>thead>tr>td{  /*This is where all of the labels for each of the days are held.*/
+	padding: 3px;
+	background-color: #fff;
+	color: #666;
+}
+
+.multi-calendar>table>tbody>tr>td.mc-dead-date{  /*Dead dates, IE the ones that are shown on the current table but are from different months than the current.*/
+	background-color: #f1f1f1;
+	color: #c9c8c8;
+}
+
+.multi-calendar>table>tbody>tr>td.mc-live-date{  /*Live dates, all dates that are show on the table and are from the current month.*/
+	background-color: #ffffff;
+	color: #333;
+	font-weight: bold;
+}
+
+.multi-calendar>table>tbody>tr>td.mc-today{  /*Today's date.*/
+	background-color: #707070;
+	color: #FFFFFF;
+}
+
+.multi-calendar>table>tbody>tr>td.mc-selected{  /*Selected dates.*/
+	color: #fff;
+	background-color: #1b2a39!important;
+}
+
+/*All border crap from here on.*/
+
+.multi-calendar>table>tbody>tr>td.mc-common{  /*This is applied to all date cells that are NOT in the last COLUMN.*/
+	padding: 3px;
+	border-right: 1px solid #888;
+	border-top: 1px solid #888;
+}
+
+.multi-calendar>table>thead>tr>td.mc-date-label{  /*This is for the border of each of the date labels EXCEPT for the LAST one.*/
+	padding: 3px;
+	border-right: 1px solid #888;
+}
+
+.multi-calendar>table>tbody>tr>td.mc-top{  /*This is applied to all of the date cells that are in the LAST COLUMN.*/
+	padding: 3px;
+	border-top: 1px solid #888;
+}
